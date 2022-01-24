@@ -6,6 +6,14 @@
 </head>
 <body>
     <h1>Login-Page</h1>
-    <a href="{{ url_for('register') }}">Don#t hav an Account sign in</a><br>
+
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.username }}
+        {{ form.password }}
+        {{ form.submit }}
+    </form>
+
+    <a href="{{ url_for('register') }}">Don't have an Account? Sign in</a><br>
 </body>
 </html>
